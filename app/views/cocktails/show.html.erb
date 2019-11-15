@@ -1,0 +1,9 @@
+
+<h1><%= @cocktail.name %></h1>
+<% @cocktail.doses.each do |dose| %>
+<%= dose.ingredient.name %>
+  <%= dose.description %>
+<% end %>
+<%= render 'doses/form' %>
+ <h2><%= link_to "back to main page", cocktails_path %></h2>
+ <h2><%= link_to "Delete dose", cocktail_doses_path(@cocktail) %></h2>
