@@ -3,7 +3,9 @@
 <% @cocktail.doses.each do |dose| %>
 <%= dose.ingredient.name %>
   <%= dose.description %>
+ <h2><%= link_to '🗑', dose_path(dose), method: :delete %></h2>
+</h2>
 <% end %>
 <%= render 'doses/form' %>
- <h2><%= link_to "back to main page", cocktails_path %></h2>
- <h2><%= link_to "Delete dose", cocktail_doses_path(@cocktail) %></h2>
+
+
